@@ -9,10 +9,18 @@
   
 <?php
 
-echo "Hola mundo<br>";
-echo date("d/m/Y");
+$stock = -5;
 
+if ($stock >= 0 ) {
+
+    echo "hay stock" ; 
+}
+else {
+    echo "no hay stock" ; 
+}
 ?>
+
+
 
 </body>
 </html>
