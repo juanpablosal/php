@@ -35,7 +35,7 @@ $aPeliculas = array("Avenger end game", "Iron man", "batman" )
                         <th>fecha:</th>
                         <td>
                             <?php
-                            echo date("d/m/Y");
+                            echo date("d/m/Y");     
                             ?>
                         </td>
                     </tr>
