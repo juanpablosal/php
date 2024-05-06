@@ -18,6 +18,7 @@ $aProductos[] = array(
 );
 
 $aProductos[] = array(
+    
     "nombre" => "Aire acondicionado Split inventer frio/calor Surrey 2900F",
     "marca" => "Surrey",
     "modelo" => "553AIQ1201E",
@@ -40,7 +41,7 @@ $aProductos[] = array(
 <body>
 
     <main class="container">
-        <div class="row">
+        <div class="row">       
             <div class="col-12">
                 <h1 class="py-5 text-center">
                     Listado de productos
@@ -64,24 +65,32 @@ $aProductos[] = array(
                     </thead>
 
                     <tbody>
-
-                        <?php
-                        $contador = 0;
-                        while ($contador < 3) {
-                        }
-                        ?>
-
                         <tr>
-                            <td><?php echo $aProductos[$contador]["nombre"]; ?></td>
-                            <td><?php echo $aProductos[$contador]["marca"]; ?></td>
-                            <td><?php echo $aProductos[$contador]["modelo"]; ?></td>
-                            <td><?php echo $aProductos[$contador]["stock"] > 10 ? "hay Stock" : ($aProductos[$contador]["stock"] > 0 && $aProductos[$contador]["stock"] <= 10 ? "poco Stock" : "no hay stock"); ?></td>
-                            <td><?php echo $aProductos[$contador]["precio"]; ?></td>
+                            <td><?php echo $aProductos[0]["nombre"]; ?></td>
+                            <td><?php echo $aProductos[0]["marca"]; ?></td>
+                            <td><?php echo $aProductos[0]["modelo"]; ?></td>
+                            <td><?php echo $aProductos[0]["stock"] >10? "hay Stock" : ($aProductos[0] ["stock"] > 0 && $aProductos [0]["stock"] <= 10? "poco Stock" : "no hay stock"); ?></td>
+                            <td><?php echo $aProductos[0]["precio"]; ?></td>
                             <td><button class="btn btn-primary">Comprar</button></td>
                         </tr>
 
+                        <tr>
+                            <td><?php echo $aProductos[1]["nombre"]; ?></td>
+                            <td><?php echo $aProductos[1]["marca"]; ?></td>
+                            <td><?php echo $aProductos[1]["modelo"]; ?></td>
+                            <td><?php echo $aProductos[1]["stock"] >10? "hay Stock" : ($aProductos[1] ["stock"] > 0 && $aProductos [1]["stock"] <= 10? "poco Stock" : "no hay stock"); ?></td>
+                            <td><?php echo $aProductos[1]["precio"]; ?></td>
+                            <td><button class="btn btn-primary">Comprar</button></td>
+                        </tr>
 
-                        <?php $contador = $contador++; ?>
+                        <tr>
+                            <td><?php echo $aProductos[2]["nombre"]; ?></td>
+                            <td><?php echo $aProductos[2]["marca"]; ?></td>
+                            <td><?php echo $aProductos[2]["modelo"]; ?></td>
+                            <td><?php echo $aProductos[2]["stock"] >10? "hay Stock" : ($aProductos[2] ["stock"] > 0 && $aProductos [2]["stock"] <= 10? "poco Stock" : "no hay stock"); ?></td>
+                            <td><?php echo $aProductos[2]["precio"]; ?></td>
+                            <td><button class="btn btn-primary">Comprar</button></td>
+                        </tr>
                     </tbody>
 
                 </table>

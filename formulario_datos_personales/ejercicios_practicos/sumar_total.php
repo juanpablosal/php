@@ -18,6 +18,7 @@ $aProductos[] = array(
 );
 
 $aProductos[] = array(
+    
     "nombre" => "Aire acondicionado Split inventer frio/calor Surrey 2900F",
     "marca" => "Surrey",
     "modelo" => "553AIQ1201E",
@@ -64,38 +65,30 @@ $aProductos[] = array(
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td><?php echo $aProductos[0]["nombre"]; ?></td>
-                            <td><?php echo $aProductos[0]["marca"]; ?></td>
-                            <td><?php echo $aProductos[0]["modelo"]; ?></td>
-                            <td><?php echo $aProductos[0]["stock"] >10? "hay Stock" : ($aProductos[0] ["stock"] > 0 && $aProductos [0]["stock"] <= 10? "poco Stock" : "no hay stock"); ?></td>
-                            <td><?php echo $aProductos[0]["precio"]; ?></td>
-                            <td><button class="btn btn-primary">Comprar</button></td>
-                        </tr>
 
-                        <tr>
-                            <td><?php echo $aProductos[1]["nombre"]; ?></td>
-                            <td><?php echo $aProductos[1]["marca"]; ?></td>
-                            <td><?php echo $aProductos[1]["modelo"]; ?></td>
-                            <td><?php echo $aProductos[1]["stock"] >10? "hay Stock" : ($aProductos[1] ["stock"] > 0 && $aProductos [1]["stock"] <= 10? "poco Stock" : "no hay stock"); ?></td>
-                            <td><?php echo $aProductos[1]["precio"]; ?></td>
-                            <td><button class="btn btn-primary">Comprar</button></td>
-                        </tr>
+                    <?php 
 
+                     $subTotal = 0;
+                    
+                    for ($Contador = 0; $Contador < count($aProductos) ; $Contador++) {
+                    ?>
                         <tr>
-                            <td><?php echo $aProductos[2]["nombre"]; ?></td>
-                            <td><?php echo $aProductos[2]["marca"]; ?></td>
-                            <td><?php echo $aProductos[2]["modelo"]; ?></td>
-                            <td><?php echo $aProductos[2]["stock"] >10? "hay Stock" : ($aProductos[2] ["stock"] > 0 && $aProductos [2]["stock"] <= 10? "poco Stock" : "no hay stock"); ?></td>
-                            <td><?php echo $aProductos[2]["precio"]; ?></td>
+                            <td><?php echo $aProductos[$Contador]["nombre"] ?></td>
+                            <td><?php echo $aProductos[$Contador]["marca"] ?></td>
+                            <td><?php echo $aProductos[$Contador]["modelo"] ?></td>
+                            <td><?php echo $aProductos[$Contador]["stock"] >10? "hay Stock" : ($aProductos[$Contador] ["stock"] > 0 && $aProductos [$Contador]["stock"] <= 10? "poco Stock" : "no hay stock"); ?></td>
+                            <td><?php echo $aProductos[$Contador]["precio"] ?></td>
                             <td><button class="btn btn-primary">Comprar</button></td>
                         </tr>
+                        <?php
+                             $subTotal += $aProductos[$Contador]["precio"];
+                            }
+                          ?>
                     </tbody>
-
-                    
-                    
-                    $aProductos [] ["stock"] = 0 
                 </table>
+                <h2>
+                        El subtotal es: $<?php echo $subTotal;?>
+                </h2>
             </div>
         </div>
     </main>
